@@ -2,7 +2,12 @@
 <header>
 
   <h2>Hello, from {{ title.toUpperCase() }}!</h2>
-  <app-button color="green" text="Add" (btnClick)="toggleAddTask()"></app-button>
+  <app-button
+    color="{{ showAddTask ? 'red' : 'green'}}"
+    text="{{ showAddTask ? 'close' : 'add'}}"
+    (btnClick)="toggleAddTask()">
+
+  </app-button>
 
 
 </header>
