@@ -3,6 +3,7 @@
 
   <h2>Hello, from {{ title.toUpperCase() }}!</h2>
   <app-button
+    *ngIf ="hasRoute('/')"
     color="{{ showAddTask ? 'red' : 'green'}}"
     text="{{ showAddTask ? 'close' : 'add'}}"
     (btnClick)="toggleAddTask()">
